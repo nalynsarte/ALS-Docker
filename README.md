@@ -27,3 +27,8 @@ Follow the instruction to use Docker to run container locally in your laptop.
 https://hub.docker.com/
 
 https://training.play-with-docker.com/beginner-linux/
+
+1. Build container image
+docker build -t ALS-Docker .
+
+
