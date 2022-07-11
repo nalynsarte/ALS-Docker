@@ -14,7 +14,12 @@ Follow the instruction to use Docker to run container locally in your laptop.
     **Linux**
     ```
     ```
-  
+2. Build docker image and tag and push to repository (https://hub.docker.com/)
+   ```
+   docker image build --tag ${DOCKERID}/als-docker:local .
+   docker tag ${DOCKERID}/als-docker:local ${DOCKERID}/als-docker
+   docker push ${DOCKERID}/als-docker:latest
+   ```
 2. Create a docker volume to persist home dir data:
     ```
     docker volume create <volume_name>
@@ -24,11 +29,4 @@ Follow the instruction to use Docker to run container locally in your laptop.
     docker run -it --mount source=<volume_name>,target=/home/user <docker_image> sh -l
     ```
 
-https://hub.docker.com/
-
 https://training.play-with-docker.com/beginner-linux/
-
-1. Build container image
-docker build -t ALS-Docker .
-
-
